@@ -1,0 +1,16 @@
+*~
+*.blend1
+*.orig
+.DS_Store
+.env
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+/.cache/
+/.idea/
+/.venv/
+/.vscode/
+/benchmarks/.venv/
+/benchmarks/.codspeed/
+/benchmarks/temp/*
+__pycache__/

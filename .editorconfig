@@ -1,0 +1,57 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_size = 2
+indent_style = space
+tab_width = 4
+trim_trailing_whitespace = true
+
+[*.bat]
+charset = latin1
+end_of_line = crlf
+
+[*.{py,pyi}]
+indent_size = 4
+
+[*.txt]
+indent_size = unset
+
+[*.md]
+indent_size = unset
+
+[/LICENSE*]
+indent_size = unset
+
+[*.{blend,gif,glb,ico,jpg,png,pptx,pyc,tga,vrm}]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+indent_size = unset
+indent_style = unset
+tab_width = unset
+trim_trailing_whitespace = unset
+
+[{.git,.venv,node_modules}/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+indent_size = unset
+indent_style = unset
+tab_width = unset
+trim_trailing_whitespace = unset
+
+[**/{.ruff_cache,.mypy_cache}/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+indent_size = unset
+indent_style = unset
+tab_width = unset
+trim_trailing_whitespace = unset
+
+[*.sh]
+# https://github.com/mvdan/sh/blob/v3.12.0/cmd/shfmt/shfmt.1.scd?plain=1#L132-L157
+simplify = true
