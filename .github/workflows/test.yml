@@ -41,3 +41,5 @@ jobs:
           
           # (プライベートリポジトリの場合に必要)
           # token: ${{ secrets.CODSPEED_TOKEN }}
+        env:
+          VALGRIND_OPTS: "--trace-children-skip=*"
