@@ -10,11 +10,17 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v5
-      - uses: astral-sh/setup-uv@85856786d1ce8acfbcc2f13a5f3fbd6b938f9f41 # v7.1.2
-        with:
-          activate-environment: "true"
+      - run: |
+          sudo DEBIAN_FRONTEND=noninteractive apt-get update -q
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install \
+            python3 \
+            python3-venv \
+            --no-install-recommends --yes
+          python3 -m venv --system-site-packages .venv
+          . ./.venv/bin/activate
+          pip3 install "pytest < 10" "pytest-codspeed < 5"
       - name: Run benchmarks
         uses: CodSpeedHQ/action@v4
         with:
           mode: instrumentation
-          run: uv run pytest src/anytime_py_benchmark --codspeed
+          run: . ./.venv/bin/activate; pytest --codspeed
