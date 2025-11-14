@@ -23,4 +23,4 @@ jobs:
         uses: CodSpeedHQ/action@v4
         with:
           mode: instrumentation
-          run: . ./.venv/bin/activate; pytest --codspeed
+          run: ./.venv/bin/pytest --codspeed
