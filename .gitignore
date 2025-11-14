@@ -7,6 +7,7 @@
 .pytest_cache/
 .ruff_cache/
 /.cache/
+/.codspeed/
 /.idea/
 /.venv/
 /.vscode/
@@ -14,4 +15,3 @@
 /benchmarks/.codspeed/
 /benchmarks/temp/*
 __pycache__/
-/.codspeed/
