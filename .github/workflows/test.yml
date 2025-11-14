@@ -23,7 +23,8 @@ jobs:
           sudo DEBIAN_FRONTEND=noninteractive apt-get update -q
           sudo DEBIAN_FRONTEND=noninteractive apt-get install python3-full --no-install-recommends --yes
           python3 --version
-          pip3 install pytest pytest-codspeed
+          python3 -m pip install --upgrade pip
+          pip install pytest pytest-codspeed
 
       # 🔽 このステップを確認・修正してください 🔽
       - name: Run benchmarks
