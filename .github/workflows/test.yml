@@ -16,4 +16,4 @@ jobs:
         uses: CodSpeedHQ/action@v4
         with:
           mode: instrumentation
-          run: pytest src/anytime_py_benchmark --codspeed
+          run: uv run pytest src/anytime_py_benchmark --codspeed
